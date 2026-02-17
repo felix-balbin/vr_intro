@@ -9,6 +9,7 @@ public class BulletCollision : MonoBehaviour
         if(target != null)
         {
             target.BulletHit(contactPoint.point, contactPoint.normal);
+            Destroy(gameObject);
         }
 
 

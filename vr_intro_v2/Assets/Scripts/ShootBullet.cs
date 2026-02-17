@@ -4,7 +4,7 @@ public class ShootBullet : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public float bulletSpeed = 20f;
+    public float bulletSpeed = 40f;
     public float bulletLifetime = 5f;
 
     public AudioClip clip;
@@ -31,6 +31,14 @@ public class ShootBullet : MonoBehaviour
         {
             rbBullet.linearVelocity = firePoint.forward * bulletSpeed;
         }
+
+        // Sonido
+        if (clip != null && source != null)
+            source.PlayOneShot(clip);
+
+        // Partículas
+        if (particles != null)
+            particles.Play();
 
         Destroy(bullet, bulletLifetime);
     }
