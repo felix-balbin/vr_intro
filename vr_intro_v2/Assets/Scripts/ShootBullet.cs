@@ -24,8 +24,8 @@ public class ShootBullet : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody rbBullet = bullet.GetComponent<Rigidbody>();
 
-        source.PlayOneShot(clip);
-        particles.Play();
+        //source.PlayOneShot(clip);
+        //particles.Play();
 
         if (rbBullet != null)
         {
