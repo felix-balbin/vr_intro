@@ -34,11 +34,15 @@ public class ShootBullet : MonoBehaviour
 
         // Sonido
         if (clip != null && source != null)
+        {
             source.PlayOneShot(clip);
+        }
 
         // Partículas
         if (particles != null)
+        {
             particles.Play();
+        }
 
         Destroy(bullet, bulletLifetime);
     }
